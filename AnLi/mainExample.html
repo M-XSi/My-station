@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>常用工具列表</title>
+<!--    2.引入element-ui样式库-->
+    <link rel="stylesheet"
+          href="../../Study-WebCommonPractice/static/element-ui/index.css">
+    <link rel="shortcut icon" href="#"/>
+</head>
+<body>
+<!--3.创建容器-->
+<div id="app">
+<!--    页面主体-->
+
+
+
+<!--    对话框-->
+<!--    <el-dialog-->
+<!--            width="60%"-->
+<!--            :title="dialog.title"-->
+<!--            :visible.sync="dialog.show"-->
+<!--            :close-on-click-modal='false'-->
+<!--            :close-on-press-escape='false'-->
+<!--            :modal-append-to-body='false'>-->
+<!--        -->
+<!--    </el-dialog>-->
+</div>
+
+<!--1.1引入VUE-->
+<script src="./static/vue/vue.js"></script>
+<!--1.2引入element ui-->
+<script src="./static/element-ui/index.js"></script>
+<!--1.3引入axios-->
+<script src="./static/axios/axios.js"></script>
+<!--1.4引入自定义的axios配置文件mx-config.js-->
+<script src="./static/mx-config.js"></script>
+
+
+<script>
+    // 4.定义vue实例
+    const app=new vue({
+        el:"#app",//挂载到容器
+        // 数据
+        data:function () {
+            return{
+                //dialog用于控制对话框的隐藏/显示
+                dialog:{
+                    show:false,
+                    title:'',
+                    option:'add'
+                },
+            }
+        },
+        // 生命周期钩子
+        mounted:function () {
+          // 初始化函数
+          // this.initTable()
+        },
+        // 方法
+        methods:{
+            //初始化表格函数
+            // initTable(){
+            //     //从服务器获得数据
+            //     axios.get("/car").then(res=>{
+            //         this.carList=res.data;
+            //     })
+            //     console.log(">>>initTable---初始化完成");
+            // },
+
+
+            
+        }
+    })
+</script>
+
+</body>
+</html>
